@@ -33,7 +33,7 @@ def compute_metrics_per_gender(labels, predictions, gender_column, gender_value)
     
     true_positive_rate = tp / (tp + fn) if (tp + fn) > 0 else 0
     
-    false_positive_rate = fp / (fp + tn) if (fp + tn) > 0 else 0
+    false_positive_rate = tn / (fp + tn) if (fp + tn) > 0 else 0
     
     return positive_rate, true_positive_rate, false_positive_rate
 
